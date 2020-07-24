@@ -1,7 +1,7 @@
 import { useOfficers, getOfficers } from "./OfficerProvider.js"
 import { officerHTML } from "./OfficerHTMLconverter.js"
 
-const contentTarget = document.querySelector(".filters__officer")
+const contentTarget = document.querySelector(".officersContainer")
 
 export const officerList = () => {
     //triggers the fetch call and populates an array with the fetched data

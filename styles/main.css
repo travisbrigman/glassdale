@@ -9,29 +9,32 @@ body {
 }
 
 .officer-card {
+    border-radius: 25px;
     flex-basis: 25%;
     margin: 1rem;
     border: 1px solid blue;
     padding: 10px;
-    width: max-content;
-    height: max-content;
+   /* width: max-content;
+    height: max-content; */
+    background-color: rgba(0, 0, 255, 0.288) ;
+    box-shadow: 3px 3px rgba(128, 128, 128, 0.281);
 }
 
 .criminalsContainer {
     display: flex;
     flex-flow: row wrap;
-    flex-basis: content;
+    
+    justify-content: space-evenly;
 }
 
 
 .criminal-card {
-    background-color: honeydew;
-    /*opacity: .5;*/
+    background-color: rgba(255, 251, 240, 0.26);
     border: 1px solid grey;
     margin: 5px;
     border-radius: 25px;
     padding: 10px;
-    box-shadow: 3px 3px grey;
+    box-shadow: 3px 3px rgba(128, 128, 128, 0.281);
     width: max-content;
     height: max-content;
 }
