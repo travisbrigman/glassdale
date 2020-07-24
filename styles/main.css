@@ -1,0 +1,41 @@
+body {
+    background-color: tan;
+}
+
+.officersContainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+}
+
+.officer-card {
+    flex-basis: 25%;
+    margin: 1rem;
+    border: 1px solid blue;
+    padding: 10px;
+    width: max-content;
+    height: max-content;
+}
+
+.criminalsContainer {
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: content;
+}
+
+
+.criminal-card {
+    background-color: honeydew;
+    /*opacity: .5;*/
+    border: 1px solid grey;
+    margin: 5px;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: 3px 3px grey;
+    width: max-content;
+    height: max-content;
+}
+
+#criminal-card__text {
+    color: rgb(32, 32, 32);
+}
