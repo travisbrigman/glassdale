@@ -1,32 +1,55 @@
-//1️⃣ Import components from other modules
-//2️⃣ establish the class the query selector will search for
-//3️⃣ Estiblash a function that will trigger the process of turning JSON data to something displayed on the DOM
-//4️⃣ invoke the function that fetches data and populates an array with objects
-//5️⃣ use .then() method to turn data into HTML using HTML converter function
-//6️⃣ declare a variable whose variable is the array that was populated in the 'get' function
-//7️⃣ declare a variable that will hold the HTML representation string value that will be made by iterating over they above array
-//8️⃣ iterate over the array and for each object, pass parameters into the HTML converter and then append to the HTML representation string
-//9️⃣ Add the HTML representation string to the HTML document.
-//----------------------------------------------------------------------------------------------------------------------------------------------//
-
-
-
 import { criminalHTML } from "./CriminalHTMLconverter.js"           //1️⃣
 import { useCriminals, getCriminals } from "./CriminalProvider.js"
+import { useConvictions } from "../convictions/ConvictionProvider.js"
 
 const contentTarget = document.querySelector(".criminalsContainer") //2️⃣
 
-export const criminalList = () => {                                 //3️⃣
+const eventHub = document.querySelector(".container")
 
-    getCriminals()                                                  //4️⃣
+// Listen for the custom event you dispatched in ConvictionSelect
+eventHub.addEventListener("crimeChosen", event => {
+       
+        /* Filter the criminals application state down to the people that committed the crime */
 
-    .then(() => {                                                   //5️⃣
-        const criminalArray = useCriminals()                        //6️⃣
-        let criminalHTMLrepresentation = ""                         //7️⃣
-        criminalArray.forEach(criminal => {                         //8️⃣
-            criminalHTMLrepresentation += criminalHTML(criminal)    
-        })
-        contentTarget.innerHTML = criminalHTMLrepresentation        //9️⃣
+        const crimeThatWasSelected = event.detail.crimeThatWasChosen 
+        
+        const arrayOfCrimes = useConvictions()
+        
+        const foundCrimeObject = arrayOfCrimes.find(
+            crime => {
+                return parseInt(crimeThatWasSelected) === crime.id
+            }
+        )
+
+        const appStateCriminals = useCriminals()
+
+
+       const matchingCriminals = appStateCriminals.filter(
+           (currentCriminalObject) => {
+               return foundCrimeObject.name === currentCriminalObject.conviction 
+           }
+       )
+       
+       /* Then invoke render() and pass the filtered collection as an argument */
+
+       render(matchingCriminals)
+})
+
+const render = (criminalCollection) => {
+    let criminalHTMLrepresentation = ""                         //7️⃣
+
+    criminalCollection.forEach(criminal => {                         //8️⃣
+        criminalHTMLrepresentation += criminalHTML(criminal)    
     })
+    contentTarget.innerHTML = criminalHTMLrepresentation        //9️⃣
 }
 
+
+// Render ALL criminals initally
+export const CriminalList = () => {
+    getCriminals()
+    .then(() => {
+        const appStateCriminals = useCriminals()
+        render(appStateCriminals)
+    })
+}
