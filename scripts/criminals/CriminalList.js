@@ -35,19 +35,23 @@ eventHub.addEventListener("crimeChosen", event => {
        render(matchingCriminals)
 })
 
-eventHub.addEventListener("officerSelect", event => {
+eventHub.addEventListener("officerSelected", event => {
+    console.log("CriminalList: cusom event heard on Event Hub")
+
     // How can you access the officer name that was selected by the user?
-    const officerName = event.detail.officerSelected
+    const officerName = event.detail.officer
 
     // How can you get the criminals that were arrested by that officer?
     const criminals = useCriminals()
-    criminals.filter(
+    const filteredByArrestingOfficer = criminals.filter(
         criminalObject => {
             if (criminalObject.arrestingOfficer === officerName) {
                 return true
             }
+            return false
         }
     )
+    render(filteredByArrestingOfficer)
 })
 
 const render = (criminalCollection) => {
