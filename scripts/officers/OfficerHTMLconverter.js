@@ -1,7 +1,7 @@
 
 export const officerHTML = (officerObject) => {
    return `
-            <article class="officer-card">
+            <article class="officer">
             ${officerObject.name}
             </article>
         `

@@ -30,6 +30,20 @@
       "text": "Time Stamp Test",
       "timeStamp": 1596214646656,
       "id": 5
+    },
+    {
+      "name": "",
+      "title": "",
+      "text": "",
+      "timeStamp": 1596223507264,
+      "id": 6
+    },
+    {
+      "name": "Detective T",
+      "title": "does it save",
+      "text": "testing to see if we save and autorefresh notes",
+      "timeStamp": 1596227696009,
+      "id": 7
     }
   ]
 }
