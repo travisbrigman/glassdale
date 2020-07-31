@@ -29,3 +29,8 @@ export const saveNote = note => {
     .then(getNotes)
     .then(dispatchStateChangeEvent)
 }
+
+
+export const useNotes = () => {
+    return notes.slice()
+}

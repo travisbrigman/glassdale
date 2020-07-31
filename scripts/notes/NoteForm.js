@@ -15,7 +15,8 @@ eventHub.addEventListener("click", clickEvent => {
         const newNote = {
             name: noteName.value,
             title: noteTitle.value,
-            text: noteContent.value
+            text: noteContent.value,
+            timeStamp: Date.now()
         }
 
         // Change API state and application state

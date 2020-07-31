@@ -3,11 +3,14 @@ import { CriminalList } from "./criminals/CriminalList.js"
 import { ConvictionSelect } from "./convictions/ConvictionSelect.js"
 import { officerSelect } from "./officers/OfficerSelect.js"
 import { NoteForm } from "./notes/NoteForm.js"
-import { NoteList } from "./notes/NoteList.js"
+import { ShowNoteButton } from "./notes/ShowNoteButton.js"
+import "./notes/NoteList.js"
+
 
 NoteForm()
 officerList()
 CriminalList()
 ConvictionSelect()
 officerSelect()
-NoteList()
+NoteForm()
+ShowNoteButton()
