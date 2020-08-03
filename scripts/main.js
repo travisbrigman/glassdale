@@ -5,6 +5,10 @@ import { officerSelect } from "./officers/OfficerSelect.js"
 import { NoteForm } from "./notes/NoteForm.js"
 import { ShowNoteButton } from "./notes/ShowNoteButton.js"
 import "./notes/NoteList.js"
+import "./alibis/ShowAlibisButton.js"
+import "./alibis/AlibisList.js"
+
+
 
 
 

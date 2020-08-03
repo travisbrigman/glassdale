@@ -2,6 +2,7 @@ import { criminalHTML } from "./CriminalHTMLconverter.js"           //1️⃣
 import { useCriminals, getCriminals } from "./CriminalProvider.js"
 import { useConvictions } from "../convictions/ConvictionProvider.js"
 
+
 const contentTarget = document.querySelector(".criminalsContainer") //2️⃣
 
 const eventHub = document.querySelector(".container")
@@ -58,7 +59,7 @@ const render = (criminalCollection) => {
     let criminalHTMLrepresentation = ""                         //7️⃣
 
     criminalCollection.forEach(criminal => {                         //8️⃣
-        criminalHTMLrepresentation += criminalHTML(criminal)    
+        criminalHTMLrepresentation += criminalHTML(criminal)   
     })
     contentTarget.innerHTML = criminalHTMLrepresentation        //9️⃣
 }

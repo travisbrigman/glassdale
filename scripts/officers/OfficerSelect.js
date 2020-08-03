@@ -27,7 +27,6 @@ eventHub.addEventListener("change", changeEvent => {
 })
 
 const render = officersCollection => {
-    console.log("OfficerSelect: Officer select rendered to DOM")
     contentTarget.innerHTML = `
         <select class="dropdown" id="officerSelect">
             <option value="0">Please select an officer...</option>
@@ -43,7 +42,6 @@ const render = officersCollection => {
 }
 
 export const officerSelect = () => {
-    console.log("OfficerSelect: Initial Render of Officer Select")
     getOfficers().then(() => {
         // Get all officers from application state
         const officers = useOfficers()
