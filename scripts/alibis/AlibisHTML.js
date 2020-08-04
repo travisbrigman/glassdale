@@ -1,8 +1,5 @@
-export const alibisHTMLConverter = (criminalObject) => {
-    return `
-             <article class="alibi">
-             ${criminalObject.known_associates[0].name}
-             ${criminalObject.known_associates[0].alibi}
-             </article>
-         `
+export const alibisHTMLConverter = (alibiObject) => {
+    return `<dialog id="alibiDialog">${alibiObject.name}, ${alibiObject.alibi}</dialog>`
  }
+
+ 
