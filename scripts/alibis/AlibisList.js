@@ -5,37 +5,37 @@ const contentTarget = document.querySelector(".alibisContainer")
 const eventHub = document.querySelector(".container")
 
 export const render = alibiArray => {
+    let allAlibis = ""
+
     alibiArray.forEach(alibiObject => {
-        contentTarget.innerHTML += alibisHTMLConverter(alibiObject)
-    });
-    
-    //use dialog box dialog.showModal or dialog.close
+        allAlibis += alibisHTMLConverter(alibiObject)
+    });   
+    contentTarget.innerHTML = `<dialog id="alibiDialog">${ allAlibis }</dialog>`
 }
 
-const modalDialog = () => { 
+const showModalDialog = () => { 
     document.getElementById("alibiDialog").showModal();
 }
-          
-    eventHub.addEventListener("alibisButtonClicked", () => {
-        const criminalMatchUp = event.detail.criminalId
-        const criminalsArray = useCriminals()
-        
-        const matchedCriminal = criminalsArray.find(
-            criminal => {
-                return parseInt(criminalMatchUp) === criminal.id
-            }
-        )
 
-        const knownAssociates = matchedCriminal.known_associates.map(
-            alibis => {
-                return alibis
-            }
-        )
-
-        render(knownAssociates)
-        console.table(knownAssociates)
-        modalDialog()
-        })
-
-
+eventHub.addEventListener("alibisButtonClicked", () => {
+    const criminalMatchUp = event.detail.criminalId
+    const criminalsArray = useCriminals()
     
+    const matchedCriminal = criminalsArray.find(
+        criminal => {
+            return parseInt(criminalMatchUp) === criminal.id
+        })
+        
+        const knownAssociates = matchedCriminal.known_associates.map(
+            associates => {
+                return associates
+            })
+            
+            render(knownAssociates)
+            console.table(knownAssociates)
+            showModalDialog()
+    })
+        
+        
+        
+        //use dialog box dialog.showModal or dialog.close
