@@ -35,7 +35,3 @@ eventHub.addEventListener("alibisButtonClicked", () => {
             console.table(knownAssociates)
             showModalDialog()
     })
-        
-        
-        
-        //use dialog box dialog.showModal or dialog.close

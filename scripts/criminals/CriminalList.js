@@ -61,7 +61,7 @@ const render = (criminalCollection) => {
     criminalCollection.forEach(criminal => {                         //8️⃣
         criminalHTMLrepresentation += criminalHTML(criminal)   
     })
-    contentTarget.innerHTML = criminalHTMLrepresentation        //9️⃣
+    contentTarget.innerHTML = `<h2>Convicted Criminals</h2> ${ criminalHTMLrepresentation }`        //9️⃣
 }
 
 
