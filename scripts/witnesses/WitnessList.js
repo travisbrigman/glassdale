@@ -7,8 +7,6 @@ const eventHub = document.querySelector(".container")
 
 eventHub.addEventListener("showWitnessListClicked", () => {
     const witnessArray = useWitnesses()
-    console.log(witnessArray)
-    
     render(witnessArray)
 })
 
@@ -21,6 +19,5 @@ const render = (witnessObject) => {
         witnessString += witnessHTMLconverter(witness)
     });
     contentTarget.innerHTML = witnessString
-    console.log(witnessString)
 }
 

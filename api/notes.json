@@ -1,49 +1,108 @@
 {
   "notes": [
     {
-      "name": "cool",
-      "title": "fresh",
-      "text": "jive",
-      "id": 1
-    },
-    {
-      "name": "cool",
-      "title": "cool ",
-      "text": "cool",
-      "id": 2
-    },
-    {
-      "name": "cool",
-      "title": "cool",
-      "text": "cool",
-      "id": 3
+      "name": "",
+      "title": "",
+      "text": "",
+      "timeStamp": 1597332930626,
+      "criminalId": 1,
+      "id": 8
     },
     {
       "name": "Travis",
-      "title": "Is this thing on?",
-      "text": "Kaboom!",
-      "id": 4
+      "title": "This is a test",
+      "text": "Testing if adding criminal will work",
+      "timeStamp": 1597333158475,
+      "criminalId": 1,
+      "id": 9
     },
     {
-      "name": "Detective Brigman",
-      "title": "Time keeps on slippin",
-      "text": "Time Stamp Test",
-      "timeStamp": 1596214646656,
-      "id": 5
+      "name": "this",
+      "title": "that",
+      "text": "this and that",
+      "timeStamp": 1597333280686,
+      "criminalId": 2,
+      "id": 10
     },
     {
       "name": "",
       "title": "",
       "text": "",
-      "timeStamp": 1596223507264,
-      "id": 6
+      "timeStamp": 1597333963205,
+      "criminalId": 1,
+      "id": 11
     },
     {
-      "name": "Detective T",
-      "title": "does it save",
-      "text": "testing to see if we save and autorefresh notes",
-      "timeStamp": 1596227696009,
-      "id": 7
+      "name": "",
+      "title": "",
+      "text": "",
+      "timeStamp": 1597341823651,
+      "criminalId": 1,
+      "id": 12
+    },
+    {
+      "name": "",
+      "title": "",
+      "text": "",
+      "timeStamp": 1597342028567,
+      "criminalId": 5,
+      "id": 13
+    },
+    {
+      "name": "",
+      "title": "",
+      "text": "",
+      "timeStamp": 1597342148189,
+      "criminalId": 1,
+      "id": 14
+    },
+    {
+      "name": "woot",
+      "title": "woot",
+      "text": "🇺🇸",
+      "timeStamp": 1597342182130,
+      "criminalId": 2,
+      "id": 15
+    },
+    {
+      "name": "",
+      "title": "",
+      "text": "",
+      "timeStamp": 1597343028378,
+      "criminalId": 1,
+      "id": 16
+    },
+    {
+      "name": "travis",
+      "title": "james is awesome",
+      "text": "team america 🇺🇸",
+      "timeStamp": 1597344970568,
+      "criminalId": 7,
+      "id": 17
+    },
+    {
+      "name": "sivart",
+      "title": "bacwards",
+      "text": "is this list backwards",
+      "timeStamp": 1597345753443,
+      "criminalId": 2,
+      "id": 18
+    },
+    {
+      "name": "sivart",
+      "title": "backwards",
+      "text": "newest to oldest",
+      "timeStamp": 1597345792971,
+      "criminalId": 7,
+      "id": 19
+    },
+    {
+      "name": "",
+      "title": "",
+      "text": "",
+      "timeStamp": 1597346154949,
+      "criminalId": null,
+      "id": 20
     }
   ]
 }

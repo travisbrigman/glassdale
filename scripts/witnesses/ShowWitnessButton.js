@@ -5,8 +5,6 @@ eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "showWitnessList") {
         const customEvent = new CustomEvent("showWitnessListClicked")
         eventHub.dispatchEvent(customEvent)
-        //FIXME: CONSOLE LOG BELOW
-        console.log("Show Witnesses Clicked")
     }
 })
 
