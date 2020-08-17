@@ -79,30 +79,6 @@
       "timeStamp": 1597344970568,
       "criminalId": 7,
       "id": 17
-    },
-    {
-      "name": "sivart",
-      "title": "bacwards",
-      "text": "is this list backwards",
-      "timeStamp": 1597345753443,
-      "criminalId": 2,
-      "id": 18
-    },
-    {
-      "name": "sivart",
-      "title": "backwards",
-      "text": "newest to oldest",
-      "timeStamp": 1597345792971,
-      "criminalId": 7,
-      "id": 19
-    },
-    {
-      "name": "",
-      "title": "",
-      "text": "",
-      "timeStamp": 1597346154949,
-      "criminalId": null,
-      "id": 20
     }
   ]
 }
