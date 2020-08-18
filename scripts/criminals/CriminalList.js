@@ -73,3 +73,5 @@ export const CriminalList = () => {
         render(appStateCriminals)
     })
 }
+
+
