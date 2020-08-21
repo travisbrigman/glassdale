@@ -33,7 +33,9 @@ eventHub.addEventListener("click", clickEvent => {
        }
 
     }
-        // Make a new object representation of a note
+    if (clickEvent.target.id === "editNote") {
+        
+    }
 })
 
 const render = (criminalCollection) => {
@@ -65,6 +67,8 @@ export const NoteForm = () => {
         render(criminalsArray)
     })
 }
+
+
 
 
 eventHub.addEventListener("change", changeEvent => {
